@@ -1,9 +1,11 @@
 %global release_name liberty
 %global service app-catalog-ui
 
+%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+
 Name:         openstack-app-catalog-ui
-Version: 1.0.0
-Release: 1%{?dist}
+Version: XXX
+Release: XXX
 Summary:      The UI component for the OpenStack App Catalog
 
 License:      ASL 2.0
@@ -27,7 +29,7 @@ Requires: python-oslo-config
 app-catalog-ui is an OpenStack Horizon user interface plugin to provide easy access to the OpenStack App Catalog.
 
 %prep
-%setup -q -n app-catalog-ui-%{version}
+%setup -q -n app-catalog-ui-%{upstream_version}
 
 # Remove the requirements file so that pbr hooks don't add it
 # to distutils requires_dist config
@@ -84,6 +86,3 @@ rm -rf %{buildroot}%{python2_sitelib}/app_catalog/enabled
 %{_sysconfdir}/openstack-dashboard/enabled/_91_project_component_catalog_panel.py*
 
 %changelog
-* Fri Oct 16 2015 Kevin Fox <kevin@efox.cc> 1.0.0-1
-- Package upstream 1.0.0
-
