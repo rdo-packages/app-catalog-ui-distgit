@@ -9,7 +9,7 @@ Release: XXX
 Summary:      The UI component for the OpenStack App Catalog
 
 License:      ASL 2.0
-URL:          https://github.com/stackforge/apps-catalog-ui
+URL:          https://github.com/openstack/apps-catalog-ui
 Source0: app-catalog-ui-1.0.0.tar.gz
 
 BuildArch:     noarch
