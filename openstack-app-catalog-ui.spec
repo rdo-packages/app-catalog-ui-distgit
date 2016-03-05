@@ -26,7 +26,9 @@ Requires: python-oslo-config
 
 
 %description
-app-catalog-ui is an OpenStack Horizon user interface plugin to provide easy access to the OpenStack App Catalog.
+
+app-catalog-ui is an OpenStack Horizon user interface plugin to
+provide easy access to the OpenStack App Catalog.
 
 %prep
 %setup -q -n app-catalog-ui-%{upstream_version}
@@ -65,7 +67,7 @@ cp -r component_catalog/templates/* %{buildroot}%{python2_sitelib}/component_cat
 rm -rf %{buildroot}%{python2_sitelib}/app_catalog/enabled
 
 %check
-# no upstream tests
+# TODO: enable upstream tests
 
 %files
 %doc README.rst
@@ -76,6 +78,7 @@ rm -rf %{buildroot}%{python2_sitelib}/app_catalog/enabled
 %{python2_sitelib}/app_catalog/*.py*
 %{python2_sitelib}/app_catalog/templates
 %{python2_sitelib}/app_catalog/static
+%{python2_sitelib}/app_catalog/tests
 %{python2_sitelib}/component_catalog/*.py*
 %{python2_sitelib}/component_catalog/templates
 %{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_80_project_catalog_panel_group.py*
