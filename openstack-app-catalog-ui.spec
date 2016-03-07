@@ -26,7 +26,6 @@ Requires: python-oslo-config
 
 
 %description
-
 app-catalog-ui is an OpenStack Horizon user interface plugin to
 provide easy access to the OpenStack App Catalog.
 
