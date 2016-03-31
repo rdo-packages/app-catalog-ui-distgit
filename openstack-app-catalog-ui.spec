@@ -3,8 +3,8 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:         openstack-app-catalog-ui
-Version:      XXX
-Release:      XXX
+Version:      1.0.0
+Release:      1%{?dist}
 Summary:      The UI component for the OpenStack App Catalog
 
 License:      ASL 2.0
@@ -76,7 +76,8 @@ rm -rf %{buildroot}%{python2_sitelib}/app_catalog/enabled
 %{python2_sitelib}/app_catalog/*.py*
 %{python2_sitelib}/app_catalog/templates
 %{python2_sitelib}/app_catalog/static
-%{python2_sitelib}/app_catalog/tests
+# FIXME:
+#%{python2_sitelib}/app_catalog/tests
 %{python2_sitelib}/component_catalog/*.py*
 %{python2_sitelib}/component_catalog/templates
 %{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_80_project_catalog_panel_group.py*
@@ -87,3 +88,5 @@ rm -rf %{buildroot}%{python2_sitelib}/app_catalog/enabled
 %{_sysconfdir}/openstack-dashboard/enabled/_91_project_component_catalog_panel.py*
 
 %changelog
+* Thu Mar 31 2016 RDO <rdo-list@redhat.com> 1.0.0-1
+- RC1 Rebuild for Mitaka RC1 
