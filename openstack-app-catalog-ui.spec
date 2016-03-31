@@ -1,16 +1,15 @@
-%global release_name liberty
 %global service app-catalog-ui
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:         openstack-app-catalog-ui
-Version: XXX
-Release: XXX
+Version:      XXX
+Release:      XXX
 Summary:      The UI component for the OpenStack App Catalog
 
 License:      ASL 2.0
 URL:          https://github.com/openstack/apps-catalog-ui
-Source0: app-catalog-ui-1.0.0.tar.gz
+Source0:      https://github.com/openstack/%{service}/archive/%{version}.tar.gz#/%{project}-%{upstream_version}.tar.gz
 
 BuildArch:     noarch
 
@@ -30,7 +29,7 @@ app-catalog-ui is an OpenStack Horizon user interface plugin to
 provide easy access to the OpenStack App Catalog.
 
 %prep
-%setup -q -n app-catalog-ui-%{upstream_version}
+%setup -q -n %{service}-%{upstream_version}
 
 # Remove the requirements file so that pbr hooks don't add it
 # to distutils requires_dist config
