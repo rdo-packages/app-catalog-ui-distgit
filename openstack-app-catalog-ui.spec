@@ -1,4 +1,3 @@
-%global release_name liberty
 %global service app-catalog-ui
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
@@ -30,7 +29,7 @@ app-catalog-ui is an OpenStack Horizon user interface plugin to
 provide easy access to the OpenStack App Catalog.
 
 %prep
-%setup -q -n app-catalog-ui-%{upstream_version}
+%setup -q -n %{service}-%{upstream_version}
 
 # Remove the requirements file so that pbr hooks don't add it
 # to distutils requires_dist config
