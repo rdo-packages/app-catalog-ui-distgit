@@ -90,3 +90,4 @@ rm -rf %{buildroot}%{python2_sitelib}/app_catalog/enabled
 %changelog
 * Thu Mar 31 2016 RDO <rdo-list@redhat.com> 1.0.0-1
 - RC1 Rebuild for Mitaka RC1 
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/app-catalog-ui/commit/?id=b73122ae3da19cd6d30e1bb58861203f2a07400e
