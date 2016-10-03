@@ -76,8 +76,7 @@ rm -rf %{buildroot}%{python2_sitelib}/app_catalog/enabled
 %{python2_sitelib}/app_catalog/*.py*
 %{python2_sitelib}/app_catalog/templates
 %{python2_sitelib}/app_catalog/static
-# FIXME:
-#%{python2_sitelib}/app_catalog/tests
+%{python2_sitelib}/app_catalog/tests
 %{python2_sitelib}/component_catalog/*.py*
 %{python2_sitelib}/component_catalog/templates
 %{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_80_project_catalog_panel_group.py*
