@@ -87,3 +87,4 @@ rm -rf %{buildroot}%{python2_sitelib}/app_catalog/enabled
 %{_sysconfdir}/openstack-dashboard/enabled/_91_project_component_catalog_panel.py*
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/app-catalog-ui/commit/?id=1d60bd72b231f78bc24527fea0441081789bf705
